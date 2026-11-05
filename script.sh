@@ -29,7 +29,7 @@ echo "¿Qué sistema operativo tiene el dispositivo objetivo? (Windows | GNU/Lin
 read hack
 
 # Validación del sistema operativo (Mensaje corregido)
-while [[ ! "$hack" =~ ^(Windows|windows|Linux|linux|MacOS|macos|Mac|Iphone|iphone|Android|android)$ ]]; do
+while [[ ! "$hack" =~ ^(Windows|windows|Linux|linux|MacOS|macos|Mac|IOS|ios|Android|android)$ ]]; do
     echo "Payload no encontrado para dicho sistema operativo, intente de nuevo."
     echo "¿Qué sistema operativo tiene el dispositivo objetivo? (Windows | GNU/Linux | MacOS | Iphone | Android): "
     read hack
